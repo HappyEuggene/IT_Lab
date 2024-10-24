@@ -1,0 +1,34 @@
+﻿@model List<IT_Lab.Models.TableModel>
+
+@{
+    ViewData["Title"] = "Tables";
+}
+
+<h2>Tables</h2>
+
+<a class="btn btn-primary" href="@Url.Action("CreateTable")">Create New Table</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Columns</th>
+            <th>Rows</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var table in Model)
+        {
+            <tr>
+                <td>@table.Name</td>
+                <td>@table.Columns.Count</td>
+                <td>@table.Rows.Count</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" href="@Url.Action("EditTable", new { name = table.Name })">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="@Url.Action("DeleteTable", new { name = table.Name })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

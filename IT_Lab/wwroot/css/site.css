@@ -1,0 +1,45 @@
+﻿/* wwwroot/css/site.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 960px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

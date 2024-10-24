@@ -1,0 +1,23 @@
+﻿@model IT_Lab.Models.TableModel
+
+@{
+    ViewData["Title"] = "Edit Table";
+}
+
+<h2>Edit Table: @Model.Name</h2>
+
+<form asp-action="EditTable" method="post" class="mt-3">
+    <div class="form-group">
+        <label for="Name">Table Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" readonly />
+    </div>
+    <!-- Додайте поля для редагування колонок та рядків тут -->
+    <button type="submit" class="btn btn-primary mt-2">Save Changes</button>
+    <a class="btn btn-secondary mt-2" href="@Url.Action("Index")">Back to List</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
